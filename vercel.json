@@ -1,33 +1,10 @@
 {
-  "routes": [
-    {
-      "src": "/news",
-      "dest": "/news.html"
-    },
-    {
-      "src": "/trending",
-      "dest": "/trending.html"
-    },
-    {
-      "src": "/subscribe",
-      "dest": "/subscribe.html"
-    },
-    {
-      "src": "/privacy",
-      "dest": "/privacy.html"
-    },
-    {
-      "src": "/terms",
-      "dest": "/terms.html"
-    },
-    {
-      "src": "/about",
-      "dest": "/about.html"
-    },
-    {
-      "src": "/faq",
-      "dest": "/faq.html"
-    }
-    
-  ]
-}
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "server.js" }
+    ]
+  }
+  
